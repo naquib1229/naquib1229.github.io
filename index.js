@@ -12,10 +12,12 @@ details.innerHTML += "Latitude: " +latitude+ " | longitude " +longitude+ "<br>";
 details.innerHTML += "Altitude: " +altitude+ "<br>";
 details.innerHTML += "Heading: " +heading+ "<br>";
 details.innerHTML += "Speed: " +speed+ "<br>";
-details.innerHTML += "reqcount: " +reqcount;
+details.innerHTML += "reqcount: " +reqcount; 
+
+document.getElementById("map").innerHTML = '<iframe width="100vw" height="100vh" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
 
 }
- 
+  
 function erroCallback(error) {
 
   //Display error based on the error code
